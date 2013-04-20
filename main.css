@@ -44,3 +44,10 @@ body, .ui-body-c {
 .page {
   display:none;
 }
+
+.fact {
+  padding-left: 64px;
+  background: url('fact.png') no-repeat left;
+  min-height: 64px;
+}
+

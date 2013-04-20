@@ -20,9 +20,9 @@ function changePage(page) {
 
 function updateLaunchCost() {
     var launchcost = Prices.rocket
-        + Robot.mass * $('#launch-robots-slider').val()
+        + (Robot.mass * $('#launch-robots-slider').val()
         + Energy.mass * $('#launch-energy-slider').val()
-        + Metal.mass * $('#launch-metal-slider').val();
+        + Metal.mass * $('#launch-metal-slider').val()) * Prices.rocketPerKilo;
     $('#launchcost').text((launchcost * 1000000).formatMoney(0, '.', ','));
 }
 
@@ -56,12 +56,12 @@ $(function() {
 
 <p>
 <label for="metal-slider-1">Metal</label><br></br>
-<input type="range" name="metal-slider-1" id="launch-metal-slider" value="0" min="0" max="10" />
+<input type="range" name="metal-slider-1" id="launch-metal-slider" value="0" min="0" max="1000" step="10"/>
 </p>
 
 <p>
 <label for="energy-slider-1">Energy</label><br></br>
-<input type="range" name="energy-slider-1" id="launch-energy-slider" value="0" min="0" max="10" />
+<input type="range" name="energy-slider-1" id="launch-energy-slider" value="0" min="0" max="1000" step="10"/>
 </p>
 
 <p>Launch cost: $<span id="launchcost">200,000,000</span>

@@ -1,3 +1,20 @@
+var Prices = {
+    rocket: 200,
+    rocketPerKilo: .01
+}
+
+var Robot = {
+    mass: 5000
+}
+
+var Energy = {
+    mass: 1
+}
+
+var Metal = {
+    mass: 4
+}
+
 function Turn() {
     this.number = 0;
     var now = Date();

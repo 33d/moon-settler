@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<script src="main.js"></script>
 
 <link rel="stylesheet" type="text/css" href="main.css"> 
  
@@ -16,6 +17,19 @@ function changePage(page) {
     $("#content .page").css("display", "none");
     $("#content #" + page).css("display", "block");
 }
+
+function updateLaunchCost() {
+    var launchcost = Prices.rocket
+        + Robot.mass * $('#launch-robots-slider').val()
+        + Energy.mass * $('#launch-energy-slider').val()
+        + Metal.mass * $('#launch-metal-slider').val();
+    $('#launchcost').text(launchcost * 10000000);
+}
+
+$(function() {
+    // Put events on the launch sliders
+    $("#launch input").change(updateLaunchCost);
+});
 </script>
  
 </head>
@@ -36,19 +50,21 @@ function changePage(page) {
 <div id="launch" class="page">
 
 <p>
-<label for="robots-slider-1">Robots</label>
+<label for="robots-slider-1">Robots</label><br></br>
 <input type="range" name="robots-slider-1" id="launch-robots-slider" value="0" min="0" max="10" />
 </p>
 
 <p>
-<label for="metal-slider-1">Metal</label>
+<label for="metal-slider-1">Metal</label><br></br>
 <input type="range" name="metal-slider-1" id="launch-metal-slider" value="0" min="0" max="10" />
 </p>
 
 <p>
-<label for="energy-slider-1">Energy</label>
+<label for="energy-slider-1">Energy</label><br></br>
 <input type="range" name="energy-slider-1" id="launch-energy-slider" value="0" min="0" max="10" />
 </p>
+
+<p>Launch cost: $<span id="launchcost"></span>
 
 <a href="#" data-role="button">Launch it!</a>
 

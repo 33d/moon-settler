@@ -20,3 +20,8 @@ function Game() {
     this.moneySpent = 0; // in millions
     this.turn = new Turn();
 }
+
+Game.prototype.endTurn = function()
+{
+    this.turn.advance();
+}

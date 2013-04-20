@@ -4,28 +4,36 @@
 <title>Reach for the stars</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="main.css"> 
  
+<script>
+function changePage(page) {
+    $("#content .page").css("display", "none");
+    $("#content #" + page).css("display", "block");
+}
+</script>
+ 
 </head>
 
 <body>
 
 <div data-role="header" id="toolbar">
-<span class="button" onclick='$("#research").popup("open");'>Research</span>
+<span class="button" onclick='changePage("summary");'>Summary</span>
+<span class="button" onclick='changePage("research");'>Research</span>
 <span class="button">Construction</span>
-<span class="button" onclick='$("#launch").popup("open");'>Rockets</span>
+<span class="button" onclick='changePage("launch");'>Rockets</span>
 </div>
 
-<div data-role="content">
-</div>
+<div data-role="content" id="content">
 
-<div id="research" class="ui-content" data-role="popup">Do some research!</div>
+<div id="research" class="page">Do some research!</div>
 
-<div id="launch" class="ui-content" style="width=75%;" data-role="popup">
+<div id="launch" class="page">
 
 <p>
 <label for="robots-slider-1">Robots</label>
@@ -42,9 +50,12 @@
 <input type="range" name="energy-slider-1" id="launch-energy-slider" value="0" min="0" max="10" />
 </p>
 
-<a href="#" data-role="button" onclick='$("#launch").popup("close");'>Launch it!</a>
+<a href="#" data-role="button">Launch it!</a>
 
 </div> <!-- end launch -->
+
+</div>
+
 
 <div data-role="footer">$10000000</div>
 

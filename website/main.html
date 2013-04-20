@@ -38,14 +38,21 @@ $(function() {
 
 <div data-role="header" id="toolbar">
 <span class="button" onclick='changePage("summary");'>Summary</span>
-<span class="button" onclick='changePage("research");'>Research</span>
+<span class="button">Research</span>
 <span class="button">Construction</span>
 <span class="button" onclick='changePage("launch");'>Rockets</span>
 </div>
 
 <div data-role="content" id="content">
 
-<div id="research" class="page">Do some research!</div>
+<div id="summary" class="page" style="display: block;">
+<p>This page shows now the moon simulator can run in a web browser.  It should probably show the graphics from our main demo.</p>
+
+<p>As an application based on Web standards, it can run in a classroom environment without having to install software.  It can easily be turned into a mobile app with <a href="http://phonegap.com/">Phonegap</a>, or a desktop application using <a href="http://www.tidesdk.org/">TideSDK</a>.  A server side component could rank participants or record data about player's preferences, which could provide information to future space policy.</p>
+
+<p>In this demo, only Summary (this page) and Rockets works.</p>
+
+</div>
 
 <div id="launch" class="page">
 

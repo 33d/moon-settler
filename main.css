@@ -37,6 +37,7 @@ body, .ui-body-c {
   right: 0;
   font-family: 'Orbitron', sans-serif;
   z-index: 100;
+  padding-left: 1em;
 }
 
 .page {

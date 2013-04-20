@@ -20,6 +20,7 @@ body, .ui-body-c {
   margin-left: 1em;
   margin-right: 1em;
   font-family: 'Orbitron', sans-serif;
+  cursor:pointer;
 }
 
 .ui-content {

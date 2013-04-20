@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html>
+<head>
+<title>Reach for the stars</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="main.css"> 
+ 
+</head>
+
+<body>
+
+<div data-role="header" id="toolbar">
+<span class="button" onclick='$("#research").popup("open");'>Research</span>
+<span class="button">Construction</span>
+<span class="button" onclick='$("#launch").popup("open");'>Rockets</span>
+</div>
+
+<div data-role="content">
+</div>
+
+<div id="research" class="ui-content" data-role="popup">Do some research!</div>
+
+<div id="launch" class="ui-content" style="width=75%;" data-role="popup">
+
+<p>
+<label for="robots-slider-1">Robots</label>
+<input type="range" name="robots-slider-1" id="launch-robots-slider" value="0" min="0" max="10" />
+</p>
+
+<p>
+<label for="metal-slider-1">Metal</label>
+<input type="range" name="metal-slider-1" id="launch-metal-slider" value="0" min="0" max="10" />
+</p>
+
+<p>
+<label for="energy-slider-1">Energy</label>
+<input type="range" name="energy-slider-1" id="launch-energy-slider" value="0" min="0" max="10" />
+</p>
+
+<a href="#" data-role="button" onclick='$("#launch").popup("close");'>Launch it!</a>
+
+</div> <!-- end launch -->
+
+<div data-role="footer">$10000000</div>
+
+</body>
+</html>

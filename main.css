@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+
+#toolbar {
+  background-color: #333;
+  font-size: 150%;
+  color: white;
+  text-align: center;
+}
+
+#toolbar .button {
+  position: relative;
+  width: 25%;
+}
+
+.ui-content {
+  height: 100%;
+}
+
+.ui-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

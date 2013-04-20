@@ -1,6 +1,8 @@
-body {
+body, .ui-body-c {
   background-color: black;
   font-family: sans-serif;
+  background: black url('moon.jpg') fixed bottom no-repeat;
+  background-width: 100% auto;  
 }
 
 .ui-header {
@@ -18,10 +20,6 @@ body {
   margin-left: 1em;
   margin-right: 1em;
   font-family: 'Orbitron', sans-serif;
-}
-
-.ui-body-c {
-  background: black;
 }
 
 .ui-content {

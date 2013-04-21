@@ -1,0 +1,53 @@
+body, .ui-body-c {
+  background-color: black;
+  font-family: sans-serif;
+  background: black url('website/moon.jpg') fixed bottom no-repeat;
+  background-size: 100% auto;  
+}
+
+.ui-header {
+  font-size: 150%;
+  color: white;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+#toolbar .button {
+  position: relative;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: 'Orbitron', sans-serif;
+  cursor:pointer;
+}
+
+.ui-content {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: #EEE;
+}
+
+.ui-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Orbitron', sans-serif;
+  z-index: 100;
+  padding-left: 1em;
+}
+
+.page {
+  display:none;
+}
+
+.fact {
+  padding-left: 64px;
+  background: url('fact.png') no-repeat left;
+  min-height: 64px;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html>
+<head>
+<title>Reach for the stars</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<script src="main.js"></script>
+
+<link rel="stylesheet" type="text/css" href="main.css"> 
+ 
+<script>
+function changePage(page) {
+    $("#content .page").css("display", "none");
+    $("#content #" + page).css("display", "block");
+}
+
+function updateLaunchCost() {
+    var launchcost = Prices.rocket
+        + (Robot.mass * $('#launch-robots-slider').val()
+        + Energy.mass * $('#launch-energy-slider').val()
+        + Metal.mass * $('#launch-metal-slider').val()) * Prices.rocketPerKilo;
+    $('#launchcost').text((launchcost * 1000000).formatMoney(0, '.', ','));
+}
+
+$(function() {
+    // Put events on the launch sliders
+    $("#launch input").change(updateLaunchCost);
+});
+</script>
+ 
+</head>
+
+<body>
+
+<div data-role="header" id="toolbar">
+<span class="button">Moon Settler</span>
+</div>
+
+<div data-role="content" id="content">
+
+<div id="summary" class="page" style="display: block;">
+
+<p>This is a submission for the 2013 Space Apps Challenge.</p>
+
+<p>Some resources:</p>
+
+<ul>
+<li><a href="http://spaceappschallenge.org/project/moon-settler/">The project page</a></li>
+<li><a href="website/main.html">The working application demo</a></li>
+</ul>
+
+</div>
+
+</div>
+
+
+<div data-role="footer">Money spent: $10,000,000</div>
+
+</body>
+</html>
